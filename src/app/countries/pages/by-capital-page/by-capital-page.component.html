@@ -1,16 +1,21 @@
-<h2>Por Capital</h2>
+<h2 class="list-group-item list-group-item-info">Nombre Capital</h2>
 <hr>
 
 <div class="row">
   <div class="col">
     <!-- SearchBox -->
-    <shared-search-box></shared-search-box>
+    <shared-search-box
+      (onValue)="searchByCapital( $event )"
+      placeholder="Buscar por Capital en inglés"
+    ></shared-search-box>
     <hr>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-    tabla de resultados
+    <ul style="padding: 0%;">
+      <countries-table [countries]="countries"></countries-table>
+    </ul>
   </div>
 </div>

@@ -17,7 +17,7 @@
      <tr *ngFor="let country of countries; let i = index">
       <td>{{ i + 1 }}</td>
       <td>
-        <img [src]="country.flags.svg" [alt]="country.name.common">
+        <img class="border border-black border-opacity-50" [src]="country.flags.svg" [alt]="country.name.common">
       </td>
       <td>{{ country.translations['spa'].common }}</td>
       <td>{{ country.capital }}</td>

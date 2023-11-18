@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutPageComponent } from './shared/pages/about-page/about-page.component';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
 import { HomePageComponent } from './shared/pages/home-page/home-page.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   // {
@@ -34,6 +35,9 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy}
   ]
 })
 export class AppRoutingModule { }
